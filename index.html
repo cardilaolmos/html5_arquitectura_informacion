@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formulario online para realizar preoperatorios de anestesia de manera rapida y eficaz.">
+    <meta name="keywords" content="preoperatorio,anestesia, eficiencia medica">
+    <meta name="author" content="Dr. Carlos Ardila Olmos">
+    <title>CordialAid Preop Manager</title>
+    <link rel="icon" href="./assets/Preop_online.webp" type="image/webp">
+</head>
+<body>
+<header>
+    <img src="./assets/Preop_online.webp" alt="Una imagen de una representacion grafica de un preoperatorio anestésico" width="200">
+    <nav>
+            <a href="#intro">Introducción</a>
+            <a href="#datper">Información Personal</a>
+               <a href="#antper">Antecedentes Personales</a>
+         <a href="#datqx">Datos Quirurgicos</a>
+            <a href="#antqx">Antecedentes Quirúrgicos</a>
+            <a href="#docpreop">Documentos Preoperatorios</a>
+            <a href="#recomendaciones">Recomendaciones Anestésicas</a>
+            <a href="#faq">Preguntas y Respuestas</a>
+            <a href="#contacto">Contáctanos</a>
+    </nav>
+</header>
+<main>
+        <h1>Preoperatorio Anestésico Online</h1>
+    <section id="intro">
+        <h2>Que es un preoperatorio y porque es importante?</h2>
+        <p>El preoperatorio es una fase crucial antes de cualquier cirugía, donde se evalúa la condición física del paciente para minimizar riesgos durante y después del procedimiento. <em>Realizarlo a conciencia es vital</em>; ser honesto en la entrega de información médica garantiza una planificación anestésica adecuada, <strong>evitando complicaciones</strong>. La ventaja de hacerlo de manera online incluye la comodidad de completarlo desde casa, ahorra tiempo y reduce visitas presenciales, facilitando un proceso más eficiente y ágil. Esta modalidad permite una comunicación directa y efectiva con el equipo médico, asegurando que todos los datos necesarios estén disponibles para una atención personalizada y segura.</p>
+    </section>
+    <section id="datper">
+        <form action="./preop_data.txt" method="post" enctype="multipart/form-data" name="datos_personales">
+            <fieldset>
+                <legend>DATOS PERSONALES</legend>
+            <label for="name">Nombres y Apellidos</label>
+            <input type="text" name="nombre" id="name" placeholder="Nombres y Apellidos" required>
+            <label for="em">Email</label>
+            <input type="email" name="email" id="em" placeholder="ejemplo@ejemplo.com">
+            <label for="birth">Fecha de Nacimiento</label>
+            <input type="date" name="fecha_nacimiento" id="birth" required>
+            <label for="sex">Género</label>
+            <select name="sexo" id="sex" required>
+                <option value="">Elige tu sexo</option>
+                <option value="masculino">Masculino</option>
+                <option value="femenino">Femenino</option>
+                <option value="otro">Otro</option>
+            </select>
+            <label for="kg">Peso</label>
+            <input type="number" name="Peso" id="kg" min="30" max="200" placeholder="Kg" title="Peso" required>
+            <label for="cm">Altura</label>
+            <input type="number" name="Altura" id="cm" min="130" max="250" placeholder="Cm" title="Altura" required>
+        </fieldset>
+    </section>
+    <section id="datqx"> 
+            <fieldset>
+                <legend>DATOS QUIRÚRGICOS</legend>
+                <label for="cir">Cirujano</label>
+                <input type="text" name="cirujano" id="cir" required>
+                <label for="qx">Intervención Quirúrgica</label>
+                <input type="text" name="qx" id="qx" placeholder="Ej: rinoseptoplastia">
+                <label for="dateqx">Fecha de la IQ</label>
+                <input type="date" name="dateqx" id="dateqx" required>
+            </fieldset>
+    </section>
+    <section id="antper">
+        <fieldset>
+            <legend>ANTECEDENTES PERSONALES</legend>
+        <p>Sufres o has sufrido alguna de las siguientes enfermedades?</p>
+        <label for="hta">Hipertensión Arterial</label>
+        <input type="checkbox" name="hta" id="hta">
+        <label for="epoc">Enfermedad Pulmonar Obstructiva</label>
+        <input type="checkbox" name="epoc" id="epoc">
+        <label for="asma">Asma</label>
+        <input type="checkbox" name="asma" id="asma">
+        <label for="irc">Insuficiencia Renal Crónica</label>
+        <input type="checkbox" name="irc" id="irc">
+        <label for="hepatopatia">Hepatopatía (Enfermedad del higado)</label>
+        <input type="checkbox" name="hepatopatia" id="hepatopatia">
+        <label for="coagulopatia">Enfermedad de la sangre (coagulopatias)</label>
+        <input type="checkbox" name="coagulopatia" id="coagulopatia">
+        <label for="arritmia">Arritmia Cardiaca</label>
+        <input type="checkbox" name="arritmia" id="arritmia">
+        <label for="cardiopatia">Enfermedad del Corazón</label>
+        <input type="checkbox" name="cardiopatia" id="cardiopatia">
+        <label for="dm">Diabetes Mellitus</label>
+        <input type="checkbox" name="dm" id="dm">
+        <label for="otro">Otro</label>
+        <input type="checkbox" name="otro" id="otro">
+        <p>En caso de "otro" especifique que:</p>
+        <textarea name="aptext" id="aptext" cols="30" rows="10"></textarea>
+        <p>Alguna medicacion que tome a diario? En caso afirmativo escriba su medicación, dosis y horario.</p>
+        <textarea name="meds" id="meds" cols="30" rows="10" placeholder="Ej: enalapril 5 mg 1-0-0, Lorazepam 1 mg 0-0-1"></textarea>
+        <p>Fuma o ha sido fumador?</p>
+        <select name="fums" id="fum">
+            <option value="Si">Si</option>
+            <option value="No">No</option>
+            <option value="ex">Exfumador</option>
+        </select>
+        <p>Alérgico a algún medicamento? En caso afirmativo escribalo.</p>
+        <textarea name="alergias" id="alerg" cols="30" rows="10" placeholder="Ej: Penicilina"></textarea>    
+        <p>Utiliza Protesis dentales REMOVIBLES?</p>
+        <select name="protdent" id="protdent" required>
+            <option value="Si">Si</option>
+            <option value="No">No</option>
+        </select>
+        </fieldset>
+    </section>
+    <section id="antqx"> 
+        <fieldset>
+            <legend>ANTECEDENTES QUIRÚRGICOS</legend>
+        <p>Te han operado previamente?</p>
+        <label for="qx1">Si</label>
+        <input type="radio" name="sinoqx" id="qx1">
+        <label for="qx2">No</label>
+        <input type="radio" name="sinoqx" id="qx2">
+        <p>En caso afirmativo escribe aquí lo que te hayan realizado y su fecha aproximada.</p>
+        <textarea name="Listaqx" id="listqx" cols="30" rows="10" placeholder="Ej: Apendicectomia 04/2022"></textarea>
+        <p>Alguna complicación con la Anestesia en alguna de las cirugías?</p>
+        <label for="an1">Si</label>
+        <input type="radio" name="sinoan" id="an1">
+        <label for="an2">No</label>
+        <input type="radio" name="sinoan" id="an2">
+        <p>En caso afirmativo explica que te pasó y cuando.</p>
+        <textarea name="complicaciones anestesia" id="anesqx" cols="30" rows="10" placeholder="Ej: sopy dificil de intubar o mis venas son muy dificiles de canalizar o En intervenciones previas me he demorado demasiado en despertar, etc."></textarea>
+        </fieldset>
+    </section>
+    <section id="docpreop">
+        <fieldset>
+            <legend>Analítica, ECG y Rx tórax</legend>
+            <p>Si tiene alguno de estos documentos porfavor adjuntelo.</p>
+            <input type="file" name="files" id="files">
+        </fieldset>
+    </section>
+    <section>
+        <input type="checkbox" name="confirm" id="confirm" required>
+      <label for="confirm">Confirmo que los datos que he aportado son verídicos y doy mi autorizaciión para la recolección de mis datos personales como parte de la valoración Preanestésica Online</label>
+      <div>
+        <input type="submit" value="Enviar">
+    </div>
+    </section>
+</main>
+    <section id="recomendaciones">
+    <h3>Lista de Recomendaciones Anestésicas</h3>
+    <ul>
+        <li><strong>Ayuno Obligatorio:</strong> Es importante no consumir alimentos sólidos ni líquidos, incluyendo agua, durante al menos 8 horas antes de la cirugía. Esto reduce el riesgo de aspiración pulmonar durante la anestesia.</li>
+        <li><strong>Ropa Adecuada:</strong> Lleve ropa cómoda y suelta el día de la cirugía. Preferiblemente, que sea fácil de quitar y poner para facilitar el proceso de cambio a la ropa hospitalaria.</li>
+        <li><strong>Evite Maquillaje y Cremas:</strong> No aplique maquillaje, lociones, cremas, ni productos de belleza el día de la cirugía. Estos pueden interferir con los procedimientos médicos o la monitorización durante la operación.</li>
+        <li><strong>Quitar Esmalte de Uñas:</strong> Se recomienda retirar el esmalte de uñas de al menos un dedo de la mano y del pie, para permitir una mejor monitorización de la oxigenación a través de la piel.</li>
+        <li><strong>Remoción de Joyas y Objetos Metálicos:</strong> Retire todas las joyas, piercings, y objetos metálicos para evitar lesiones o interferencias con el equipo médico. Esto incluye anillos, collares, pulseras, relojes, y audífonos.</li>
+        <li><strong>No Llevar Objetos de Valor:</strong> Evite llevar objetos de valor al hospital para reducir el riesgo de pérdida o daño.</li>
+        <li><strong>Medicamentos: </strong>Informe al equipo médico sobre cualquier medicación que esté tomando. Algunos medicamentos deberán suspenderse o ajustarse antes de la cirugía.</li>
+        <li><strong>Informar sobre Alergias:</strong> Es crucial informar sobre cualquier alergia a medicamentos, alimentos, o látex para prevenir reacciones adversas durante el procedimiento.</li>
+        <li><strong>Descanso Adecuado:</strong> Asegúrese de tener una buena noche de descanso antes de la cirugía. El descanso adecuado es importante para una recuperación más rápida.</li>
+        <li><strong>Transporte Postoperatorio:</strong> Organice de antemano el transporte para regresar a casa después de la cirugía, ya que no estará en condiciones de conducir.</li>
+        <li><strong>Instrucciones Específicas:</strong> Siga cualquier otra instrucción específica que su médico le haya dado, relacionada con su condición particular o el tipo de procedimiento a realizar.</li>
+    </ul>
+    <p><em>Recuerde que estas recomendaciones son generales y pueden variar dependiendo de su situación específica y del tipo de cirugía a la que se someterá. Es esencial seguir las instrucciones personalizadas proporcionadas por su equipo médico para asegurar el mejor resultado posible.
+
+        Estas medidas son esenciales para su seguridad y bienestar, y el cumplimiento de las mismas contribuye significativamente al éxito de su procedimiento anestésico y quirúrgico.</em></p>
+    </section>
+    <section id="faq">
+        <h3>Preguntas y Respuestas Frecuentes</h3>
+        <ol>
+            <li><strong>¿Qué tipos de anestesia existen?</strong>
+                Existen tres tipos principales: local, regional y general. La anestesia local adormece una pequeña área del cuerpo; la regional bloquea el dolor en una parte más amplia del cuerpo; y la general afecta al cerebro y al resto del cuerpo, induciendo un estado de inconsciencia.</li>
+            <li><strong>¿Cómo se decide el tipo de anestesia a utilizar?</strong>
+                La elección depende de varios factores, incluyendo el tipo de procedimiento, su estado de salud general, sus preferencias personales y la opinión del anestesiólogo.</li>
+            <li><strong>¿Es seguro recibir anestesia?</strong>
+                Sí, la anestesia es segura cuando es administrada por un equipo médico calificado. Sin embargo, como con cualquier procedimiento médico, existen riesgos asociados que el anestesiólogo discutirá con usted antes del procedimiento.</li>
+            <li><strong>¿Qué efectos secundarios puedo esperar de la anestesia?</strong>
+                Los efectos secundarios varían según el tipo de anestesia y pueden incluir náuseas, vómitos, dolor de garganta, cambios en la presión arterial, y, en casos raros, reacciones alérgicas.</li>
+            <li><strong>¿Puedo comer o beber antes de recibir anestesia?</strong>
+                No, es necesario ayunar durante al menos 8 horas antes de recibir anestesia general para prevenir el riesgo de aspiración pulmonar. Su equipo médico le proporcionará instrucciones específicas.</li>
+            <li><strong>¿Cómo me preparo para la anestesia?</strong>
+                Siga las instrucciones de ayuno, informe al equipo médico sobre cualquier medicamento que tome, y evite el alcohol y el tabaco antes de la cirugía. Además, siga cualquier otra indicación específica de su médico.</li>
+            <li><strong>¿Qué sucede si tengo alergia a la anestesia?</strong>
+                Las alergias a la anestesia son raras, pero es crucial informar a su anestesiólogo sobre cualquier alergia conocida. Se realizarán pruebas y evaluaciones para seleccionar los medicamentos más seguros para usted.</li>
+            <li><strong>¿Sentiré dolor durante el procedimiento?</strong>
+                La anestesia está diseñada para prevenir el dolor durante el procedimiento. En caso de anestesia regional o local, puede sentir presión o movimiento, pero no dolor agudo.</li>
+            <li><strong>¿Cómo será el proceso de recuperación después de la anestesia?</strong>
+                La recuperación varía según el tipo de anestesia. Después de la anestesia general, puede sentirse somnoliento o desorientado temporalmente. Su equipo médico monitoreará su recuperación y le dará instrucciones para el cuidado en casa.</li>
+            <li><strong>¿Cuándo puedo retomar mis actividades normales después de la anestesia?</strong>
+                Depende del tipo de anestesia y del procedimiento realizado. Generalmente, se recomienda reposo el día de la cirugía y seguir las instrucciones específicas de su médico para un retorno seguro a las actividades diarias.</li>
+        </ol>
+    </section>
+<aside>
+    <h3>Articulos de Interés</h3>
+    <a href="https://medlineplus.gov/spanish/healthtopics.html">Medline Plus</a>
+</aside>
+<footer id="contacto">
+    <p>Copyright &copy; 2024 - Carlos Ardila Olmos</p>
+    <a href="./assets/Preop_manager_privacidad.jpg">Politica de Privacidad</a>
+    <address>
+        Carlos Ardila Olmos /
+        cardilaolmos@gmail.com /
+        +34668674192
+    </address>
+</footer>
+</body>
+</html>
