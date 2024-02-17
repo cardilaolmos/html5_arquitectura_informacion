@@ -25,14 +25,17 @@
     </nav>
 </header>
 <main>
+    <!--Explicacion basica de lo que y para que es un preoperatorio-->
         <h1>Preoperatorio Anestésico Online</h1>
     <section id="intro">
         <h2>Que es un preoperatorio y porque es importante?</h2>
         <p>El preoperatorio es una fase crucial antes de cualquier cirugía, donde se evalúa la condición física del paciente para minimizar riesgos durante y después del procedimiento. <em>Realizarlo a conciencia es vital</em>; ser honesto en la entrega de información médica garantiza una planificación anestésica adecuada, <strong>evitando complicaciones</strong>. La ventaja de hacerlo de manera online incluye la comodidad de completarlo desde casa, ahorra tiempo y reduce visitas presenciales, facilitando un proceso más eficiente y ágil. Esta modalidad permite una comunicación directa y efectiva con el equipo médico, asegurando que todos los datos necesarios estén disponibles para una atención personalizada y segura.</p>
     </section>
+    <!--Formulario divido en secciones segun los datos requeridos-->
     <section id="datper">
         <form action="./preop_data.txt" method="post" enctype="multipart/form-data" name="datos_personales">
             <fieldset>
+                <!--Datos personales como nombre, email etc.-->
                 <legend>DATOS PERSONALES</legend>
             <label for="name">Nombres y Apellidos</label>
             <input type="text" name="nombre" id="name" placeholder="Nombres y Apellidos" required>
@@ -55,6 +58,7 @@
     </section>
     <section id="datqx"> 
             <fieldset>
+                <!--Datos de la cirugia en si que se va a realizar proximamente-->
                 <legend>DATOS QUIRÚRGICOS</legend>
                 <label for="cir">Cirujano</label>
                 <input type="text" name="cirujano" id="cir" required>
@@ -66,6 +70,7 @@
     </section>
     <section id="antper">
         <fieldset>
+            <!--Antecdenetes personales como enfermedades actuales, alergias o medicamentos-->
             <legend>ANTECEDENTES PERSONALES</legend>
         <p>Sufres o has sufrido alguna de las siguientes enfermedades?</p>
         <label for="hta">Hipertensión Arterial</label>
@@ -109,6 +114,7 @@
     </section>
     <section id="antqx"> 
         <fieldset>
+            <!--Antecedentes de cirugias previas y posibles complicaciones con la anestesia-->
             <legend>ANTECEDENTES QUIRÚRGICOS</legend>
         <p>Te han operado previamente?</p>
         <label for="qx1">Si</label>
@@ -127,6 +133,7 @@
         </fieldset>
     </section>
     <section id="docpreop">
+        <!--Posibilidad de subir analiticas y otros examenes asociados para agilizar su evaluación-->
         <fieldset>
             <legend>Analítica, ECG y Rx tórax</legend>
             <p>Si tiene alguno de estos documentos porfavor adjuntelo.</p>
@@ -142,6 +149,7 @@
     </section>
 </main>
     <section id="recomendaciones">
+        <!--lista corta de recomendaciones para la preparacion de la cirugiay anestesia-->
     <h3>Lista de Recomendaciones Anestésicas</h3>
     <ul>
         <li><strong>Ayuno Obligatorio:</strong> Es importante no consumir alimentos sólidos ni líquidos, incluyendo agua, durante al menos 8 horas antes de la cirugía. Esto reduce el riesgo de aspiración pulmonar durante la anestesia.</li>
@@ -161,6 +169,7 @@
         Estas medidas son esenciales para su seguridad y bienestar, y el cumplimiento de las mismas contribuye significativamente al éxito de su procedimiento anestésico y quirúrgico.</em></p>
     </section>
     <section id="faq">
+        <!--Seccion de preguntas y repsuestas mas frecuentes qu etienen lso pacientes previo a una cirugía-->
         <h3>Preguntas y Respuestas Frecuentes</h3>
         <ol>
             <li><strong>¿Qué tipos de anestesia existen?</strong>
@@ -186,10 +195,12 @@
         </ol>
     </section>
 <aside>
+    <!--Link a medline plus donde hay mucho informacion medica para pacientes de temas varios-->
     <h3>Articulos de Interés</h3>
     <a href="https://medlineplus.gov/spanish/healthtopics.html">Medline Plus</a>
 </aside>
 <footer id="contacto">
+    <!-- Datos de contacto y copyright-->
     <p>Copyright &copy; 2024 - Carlos Ardila Olmos</p>
     <a href="./assets/Preop_manager_privacidad.jpg">Politica de Privacidad</a>
     <address>
