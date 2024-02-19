@@ -8,20 +8,23 @@
     <meta name="author" content="Dr. Carlos Ardila Olmos">
     <title>CordialAid Preop Manager</title>
     <link rel="icon" href="./assets/Preop_online.webp" type="image/webp">
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
 <header>
     <img src="./assets/Preop_online.webp" alt="Una imagen de una representacion grafica de un preoperatorio anestésico" width="200">
     <nav>
-            <a href="#intro">Introducción</a>
-            <a href="#datper">Información Personal</a>
-               <a href="#antper">Antecedentes Personales</a>
-         <a href="#datqx">Datos Quirurgicos</a>
-            <a href="#antqx">Antecedentes Quirúrgicos</a>
-            <a href="#docpreop">Documentos Preoperatorios</a>
-            <a href="#recomendaciones">Recomendaciones Anestésicas</a>
-            <a href="#faq">Preguntas y Respuestas</a>
-            <a href="#contacto">Contáctanos</a>
+        <ul>
+            <li><a href="#intro">Introducción</a></li>
+            <li><a href="#datper">Información Personal</a></li>
+            <li><a href="#antper">Antecedentes Personales</a></li>
+            <li><a href="#datqx">Datos Quirurgicos</a></li>
+            <li><a href="#antqx">Antecedentes Quirúrgicos</a></li>
+            <li><a href="#docpreop">Documentos Preoperatorios</a></li>
+            <li><a href="#recomendaciones">Recomendaciones Anestésicas</a></li>
+            <li><a href="#faq">Preguntas y Respuestas</a></li>
+            <li><a href="#contacto">Contáctanos</a></li>
+        </ul>
     </nav>
 </header>
 <main>
@@ -32,8 +35,8 @@
         <p>El preoperatorio es una fase crucial antes de cualquier cirugía, donde se evalúa la condición física del paciente para minimizar riesgos durante y después del procedimiento. <em>Realizarlo a conciencia es vital</em>; ser honesto en la entrega de información médica garantiza una planificación anestésica adecuada, <strong>evitando complicaciones</strong>. La ventaja de hacerlo de manera online incluye la comodidad de completarlo desde casa, ahorra tiempo y reduce visitas presenciales, facilitando un proceso más eficiente y ágil. Esta modalidad permite una comunicación directa y efectiva con el equipo médico, asegurando que todos los datos necesarios estén disponibles para una atención personalizada y segura.</p>
     </section>
     <!--Formulario divido en secciones segun los datos requeridos-->
+     <form action="./preop_data.txt" method="post" enctype="multipart/form-data" name="datos_personales">
     <section id="datper">
-        <form action="./preop_data.txt" method="post" enctype="multipart/form-data" name="datos_personales">
             <fieldset>
                 <!--Datos personales como nombre, email etc.-->
                 <legend>DATOS PERSONALES</legend>
@@ -149,6 +152,7 @@
         <input type="submit" value="Enviar">
     </div>
     </section>
+</form>
 </main>
     <section id="recomendaciones">
         <!--lista corta de recomendaciones para la preparacion de la cirugiay anestesia-->
