@@ -12,9 +12,9 @@
 </head>
 <body>
 <header>
-    <img src="./assets/Preop_online.webp" alt="Una imagen de una representacion grafica de un preoperatorio anestésico" width="200">
+    <img src="./assets/Preop_online.webp" alt="Una imagen de una representacion grafica de un preoperatorio anestésico">
     <nav>
-        <ul>
+        <ul class="nav">
             <li><a href="#intro">Introducción</a></li>
             <li><a href="#datper">Información Personal</a></li>
             <li><a href="#antper">Antecedentes Personales</a></li>
@@ -30,20 +30,21 @@
 <main>
     <!--Explicacion basica de lo que y para que es un preoperatorio-->
         <h1>Preoperatorio Anestésico Online</h1>
-    <section id="intro">
+    <section class="intro">
         <h2>Que es un preoperatorio y porque es importante?</h2>
         <p>El preoperatorio es una fase crucial antes de cualquier cirugía, donde se evalúa la condición física del paciente para minimizar riesgos durante y después del procedimiento. <em>Realizarlo a conciencia es vital</em>; ser honesto en la entrega de información médica garantiza una planificación anestésica adecuada, <strong>evitando complicaciones</strong>. La ventaja de hacerlo de manera online incluye la comodidad de completarlo desde casa, ahorra tiempo y reduce visitas presenciales, facilitando un proceso más eficiente y ágil. Esta modalidad permite una comunicación directa y efectiva con el equipo médico, asegurando que todos los datos necesarios estén disponibles para una atención personalizada y segura.</p>
     </section>
     <!--Formulario divido en secciones segun los datos requeridos-->
      <form action="./preop_data.txt" method="post" enctype="multipart/form-data" name="datos_personales">
-    <section id="datper">
+        <h2>Formulario Preoperatorio</h2>
+    <section class="datper">
             <fieldset>
                 <!--Datos personales como nombre, email etc.-->
-                <legend>DATOS PERSONALES</legend>
+                <legend class="formtitle">DATOS PERSONALES</legend>
             <label for="name">Nombres y Apellidos</label>
             <input type="text" name="nombre" id="name" placeholder="Nombres y Apellidos" required>
             <label for="em">Email</label>
-            <input type="email" name="email" id="em" placeholder="ejemplo@ejemplo.com">
+            <input type="email" name="email" id="em" placeholder="ejemplo@ejemplo.com" required>
             <label for="birth">Fecha de Nacimiento</label>
             <input type="date" name="fecha_nacimiento" id="birth" required>
             <label for="sex">Género</label>
@@ -59,10 +60,10 @@
             <input type="number" name="Altura" id="cm" min="130" max="250" placeholder="Cm" title="Altura" required>
         </fieldset>
     </section>
-    <section id="datqx"> 
+    <section class="datqx"> 
             <fieldset>
                 <!--Datos de la cirugia en si que se va a realizar proximamente-->
-                <legend>DATOS QUIRÚRGICOS</legend>
+                <legend class="formtitle">DATOS QUIRÚRGICOS</legend>
                 <label for="cir">Cirujano</label>
                 <input type="text" name="cirujano" id="cir" required>
                 <label for="qx">Intervención Quirúrgica</label>
@@ -71,31 +72,33 @@
                 <input type="date" name="dateqx" id="dateqx" required>
             </fieldset>
     </section>
-    <section id="antper">
+    <section class="antper">
         <fieldset>
             <!--Antecdenetes personales como enfermedades actuales, alergias o medicamentos-->
-            <legend>ANTECEDENTES PERSONALES</legend>
+            <legend class="formtitle">ANTECEDENTES PERSONALES</legend>
         <p>Sufres o has sufrido alguna de las siguientes enfermedades?</p>
-        <label for="hta">Hipertensión Arterial</label>
-        <input type="checkbox" name="hta" id="hta">
-        <label for="epoc">Enfermedad Pulmonar Obstructiva</label>
-        <input type="checkbox" name="epoc" id="epoc">
-        <label for="asma">Asma</label>
-        <input type="checkbox" name="asma" id="asma">
-        <label for="irc">Insuficiencia Renal Crónica</label>
-        <input type="checkbox" name="irc" id="irc">
-        <label for="hepatopatia">Hepatopatía (Enfermedad del higado)</label>
-        <input type="checkbox" name="hepatopatia" id="hepatopatia">
-        <label for="coagulopatia">Enfermedad de la sangre (coagulopatias)</label>
-        <input type="checkbox" name="coagulopatia" id="coagulopatia">
-        <label for="arritmia">Arritmia Cardiaca</label>
-        <input type="checkbox" name="arritmia" id="arritmia">
-        <label for="cardiopatia">Enfermedad del Corazón</label>
-        <input type="checkbox" name="cardiopatia" id="cardiopatia">
-        <label for="dm">Diabetes Mellitus</label>
-        <input type="checkbox" name="dm" id="dm">
-        <label for="otro">Otro</label>
-        <input type="checkbox" name="otro" id="otro">
+    <ul>
+        <li><input type="checkbox" name="hta" id="hta">
+            <label for="hta">Hipertensión Arterial</label></li>
+        <li><input type="checkbox" name="epoc" id="epoc">
+            <label for="epoc">Enfermedad Pulmonar Obstructiva</label></li>
+        <li><input type="checkbox" name="asma" id="asma">
+            <label for="asma">Asma</label></li>
+        <li><input type="checkbox" name="irc" id="irc">
+            <label for="irc">Insuficiencia Renal Crónica</label></li>
+        <li><input type="checkbox" name="hepatopatia" id="hepatopatia">
+            <label for="hepatopatia">Hepatopatía (Enfermedad del higado)</label></li>
+        <li><input type="checkbox" name="coagulopatia" id="coagulopatia">
+            <label for="coagulopatia">Enfermedad de la sangre (coagulopatias)</label></li>
+        <li><input type="checkbox" name="arritmia" id="arritmia">
+            <label for="arritmia">Arritmia Cardiaca</label></li>
+        <li><input type="checkbox" name="cardiopatia" id="cardiopatia">
+            <label for="cardiopatia">Enfermedad del Corazón</label></li>
+        <li><input type="checkbox" name="dm" id="dm">
+            <label for="dm">Diabetes Mellitus</label></li>
+        <li><input type="checkbox" name="otro" id="otro">
+            <label for="otro">Otro</label></li>    
+    </ul>
         <p>En caso de "otro" especifique que:</p>
         <textarea name="aptext" id="aptext" cols="30" rows="10"></textarea>
         <p>Alguna medicacion que tome a diario? En caso afirmativo escriba su medicación, dosis y horario.</p>
@@ -117,46 +120,48 @@
         </select>
         </fieldset>
     </section>
-    <section id="antqx"> 
+    <section class="antqx"> 
         <fieldset>
             <!--Antecedentes de cirugias previas y posibles complicaciones con la anestesia-->
-            <legend>ANTECEDENTES QUIRÚRGICOS</legend>
+            <legend class="formtitle">ANTECEDENTES QUIRÚRGICOS</legend>
         <p>Te han operado previamente?</p>
-        <label for="qx1">Si</label>
         <input type="radio" name="sinoqx" id="qx1">
-        <label for="qx2">No</label>
+        <label for="qx1">Si</label>
         <input type="radio" name="sinoqx" id="qx2">
+        <label for="qx2">No</label>
         <p>En caso afirmativo escribe aquí lo que te hayan realizado y su fecha aproximada.</p>
         <textarea name="Listaqx" id="listqx" cols="30" rows="10" placeholder="Ej: Apendicectomia 04/2022"></textarea>
         <p>Alguna complicación con la Anestesia en alguna de las cirugías?</p>
-        <label for="an1">Si</label>
         <input type="radio" name="sinoan" id="an1">
-        <label for="an2">No</label>
+        <label for="an1">Si</label>
         <input type="radio" name="sinoan" id="an2">
+        <label for="an2">No</label>
         <p>En caso afirmativo explica que te pasó y cuando.</p>
-        <textarea name="complicaciones anestesia" id="anesqx" cols="30" rows="10" placeholder="Ej: sopy dificil de intubar o mis venas son muy dificiles de canalizar o En intervenciones previas me he demorado demasiado en despertar, etc."></textarea>
+        <textarea name="complicaciones anestesia" id="anesqx" cols="30" rows="10" placeholder="Ej: soy dificil de intubar o mis venas son muy dificiles de canalizar o En intervenciones previas me he demorado demasiado en despertar, etc."></textarea>
         </fieldset>
     </section>
-    <section id="docpreop">
+    <section class="docpreop">
         <!--Posibilidad de subir analiticas y otros examenes asociados para agilizar su evaluación-->
         <fieldset>
-            <legend>Analítica, ECG y Rx tórax</legend>
+            <legend class="formtitle">Analítica, ECG y Rx tórax</legend>
             <p>Si tiene alguno de estos documentos porfavor adjuntelo.</p>
             <input type="file" name="files" id="files">
         </fieldset>
     </section>
+    <div class="confirmar">
     <section>
         <input type="checkbox" name="confirm" id="confirm" required>
-      <label for="confirm">Confirmo que los datos que he aportado son verídicos y doy mi autorizaciión para la recolección de mis datos personales como parte de la valoración Preanestésica Online</label>
-      <div>
-        <input type="submit" value="Enviar">
+      <label for="confirm">Confirmo que los datos que he aportado son verídicos y doy mi autorización para la recolección de mis datos personales como parte de la valoración Preanestésica Online</label>
     </div>
+      <div class="enviar">
+        <input type="submit" value="Enviar">
+      </div>
     </section>
 </form>
 </main>
-    <section id="recomendaciones">
+    <section class="recomendaciones">
         <!--lista corta de recomendaciones para la preparacion de la cirugiay anestesia-->
-    <h3>Lista de Recomendaciones Anestésicas</h3>
+    <h2>Lista de Recomendaciones Anestésicas</h2>
     <ul>
         <li><strong>Ayuno Obligatorio:</strong> Es importante no consumir alimentos sólidos ni líquidos, incluyendo agua, durante al menos 8 horas antes de la cirugía. Esto reduce el riesgo de aspiración pulmonar durante la anestesia.</li>
         <li><strong>Ropa Adecuada:</strong> Lleve ropa cómoda y suelta el día de la cirugía. Preferiblemente, que sea fácil de quitar y poner para facilitar el proceso de cambio a la ropa hospitalaria.</li>
@@ -174,9 +179,9 @@
 
         Estas medidas son esenciales para su seguridad y bienestar, y el cumplimiento de las mismas contribuye significativamente al éxito de su procedimiento anestésico y quirúrgico.</em></p>
     </section>
-    <section id="faq">
+    <section class="faq">
         <!--Seccion de preguntas y repsuestas mas frecuentes qu etienen lso pacientes previo a una cirugía-->
-        <h3>Preguntas y Respuestas Frecuentes</h3>
+        <h2>Preguntas y Respuestas Frecuentes</h2>
         <ol>
             <li><strong>¿Qué tipos de anestesia existen?</strong>
                 Existen tres tipos principales: local, regional y general. La anestesia local adormece una pequeña área del cuerpo; la regional bloquea el dolor en una parte más amplia del cuerpo; y la general afecta al cerebro y al resto del cuerpo, induciendo un estado de inconsciencia.</li>
@@ -202,10 +207,11 @@
     </section>
 <aside>
     <!--Link a medline plus donde hay mucho informacion medica para pacientes de temas varios-->
-    <h3>Articulos de Interés</h3>
+    <h2>Articulos de Interés</h2>
     <a href="https://medlineplus.gov/spanish/healthtopics.html">Medline Plus</a>
 </aside>
-<footer id="contacto">
+<footer>
+    <div class="contact">
     <!-- Datos de contacto y copyright-->
     <p>Copyright &copy; 2024 - Carlos Ardila Olmos</p>
     <a href="./assets/Preop_manager_privacidad.jpg">Politica de Privacidad</a>
@@ -214,6 +220,7 @@
         cardilaolmos@gmail.com /
         +34668674192
     </address>
+</div>
 </footer>
 </body>
 </html>
