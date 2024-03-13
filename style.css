@@ -68,14 +68,20 @@ text-decoration: none;
         background-color: var(--color-forth);
     }
     main {
-        width: 90%;
+        width: 100%;
         justify-content: center;
         margin: auto;
     }
     h1,h2 {
         text-align: center;
     }
-    
+
+    .preop_exp{
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
     address {
        display: none;
     }
@@ -84,23 +90,10 @@ text-decoration: none;
         text-align: center;
     }
 }
-@media (max-width: 950px) {
-    .preop_exp{
-        flex-wrap: wrap;
-    } 
-}
 
-@media (min-width: 950px){
-    .formulario{
-        width: 80%;
-        justify-content: center;
-        margin: auto;
-    }
-
+@media (max-width: 1012px) {
     .recomendaciones{
-        width: 80%;
-        justify-content: center;
-        margin: auto;
+        margin-top: 50px;
     }
 }
 
@@ -124,7 +117,7 @@ input, textarea, select{
 
 .preop_exp{
     display: flex;
-    padding: 20px;
+    padding: 40px;
     justify-content: center;
     margin: auto;
     gap: 40px;
@@ -139,11 +132,10 @@ input, textarea, select{
     padding: 20px;
     text-align: justify;
 }
+
 .consulta_img{
     width: 350px;
 }
-
-
 
  h2 {
     display: flex;
@@ -157,8 +149,15 @@ input, textarea, select{
 legend {
     color: var(--color-forth);
 }
+
 strong, em{
     color: var(--color-thrid);
+}
+
+.formulario{
+    width: 80%;
+    justify-content: center;
+    margin: auto;
 }
 
 .datper{
@@ -168,6 +167,7 @@ strong, em{
     width: 100%;
     padding: 20px;
 }
+
 .datper > fieldset{
     display: flex;
     flex-direction: column;
@@ -176,6 +176,7 @@ strong, em{
     padding: 20px;
     gap: 10px;
 }
+
 .formtitle {
     text-align: center;
 }
@@ -187,6 +188,7 @@ strong, em{
     width: 100%;
     padding: 20px;
 }
+
 .datqx > fieldset{
     display: flex;
     flex-direction: column;
@@ -203,6 +205,7 @@ strong, em{
     width: 100%;
     padding: 20px;
 }
+
 .antper > fieldset{
     display: flex;
     flex-direction: column;
@@ -224,6 +227,7 @@ strong, em{
     width: 100%;
     padding: 20px;
 }
+
 .antqx > fieldset{
     display: flex;
     flex-wrap: wrap;
@@ -231,6 +235,7 @@ strong, em{
     padding: 20px;
     gap: 10px;
 }
+
 .antqx > fieldset > p {
     width: 100%;
 }
@@ -246,6 +251,7 @@ strong, em{
     width: 100%;
     padding: 20px;
 }
+
 .docpreop > fieldset{
     display: flex;
     flex-wrap: wrap;
@@ -280,43 +286,61 @@ text-align: justify;
     height: 50px;
     background-color: var(--color-thrid);
     color: var(--color-primario);
+    margin:10px auto 30px auto;
 }
 
 .recomendaciones{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    width: 80%;
     padding: 20px;
     text-align: justify;
     border: 2px dotted black;
     border-radius: 10px;
-    margin: 50px 10px;
+    margin: auto;
     gap: 40px;
 }
-.recomend_txt_img{
+
+.recomend_txt_img {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
+    align-items:center;
+    flex-wrap: wrap;
+    padding: 20px;
     gap: 40px;
+    margin: auto;
+}
+.recomend_txt{
+    width: 60%;
+    flex-grow: 1;
+    padding: 10px;
+}
+
+.recomend_txt2{
+    padding: 40px;
 }
 
 .recomendaciones li {
 padding: 5px;
-margin: 0 10px;
+margin: auto;
 }
 
 .recomend_img{
-    width: 350px;
+    width: 250px;
 }
 
 .faq{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 20px;
+    padding: 40px;
+    width: 80%;
     text-align: justify;
     border: 2px dotted black;
     border-radius: 10px;
-    margin: 50px 10px;
+    margin: 50px auto;
 }
 
 .faq li {
@@ -330,8 +354,9 @@ aside{
     width: 60%;    
     flex-direction: column;
     justify-content: center;
-    padding: 10px;
-    margin: 20px auto;
+    align-items: center;
+    padding: 40px;
+    margin: 20px auto 40px auto;
 }
 
 aside > a {
