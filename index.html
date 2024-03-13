@@ -15,27 +15,34 @@
     <img src="./assets/Preop_online.webp" alt="Una imagen de una representacion grafica de un preoperatorio anestésico">
     <nav>
         <ul class="nav">
-            <li><a href="#intro">Introducción</a></li>
-            <li><a href="#datper">Información Personal</a></li>
-            <li><a href="#antper">Antecedentes Personales</a></li>
-            <li><a href="#datqx">Datos Quirurgicos</a></li>
-            <li><a href="#antqx">Antecedentes Quirúrgicos</a></li>
-            <li><a href="#docpreop">Documentos Preoperatorios</a></li>
-            <li><a href="#recomendaciones">Recomendaciones Anestésicas</a></li>
-            <li><a href="#faq">Preguntas y Respuestas</a></li>
-            <li><a href="#contacto">Contáctanos</a></li>
+            <li><a href="#intro">Introducción</a>
+            </li>
+            <li><a href="#datper">Formulario</a>
+            </li>
+           <li><a href="#recomendaciones">Recomendaciones Anestésicas</a>
+        </li>
+            <li><a href="#faq">Faq</a>
+            </li>
+            <li><a href="#contacto">Contáctanos</a>
+            </li>
         </ul>
     </nav>
+    <img src="./assets/menu.svg" alt="icono _menu" class="menu_icon">
 </header>
 <main>
     <!--Explicacion basica de lo que y para que es un preoperatorio-->
         <h1>Preoperatorio Anestésico Online</h1>
+<div class="preop_exp">
     <section class="intro">
         <h2>Que es un preoperatorio y porque es importante?</h2>
         <p>El preoperatorio es una fase crucial antes de cualquier cirugía, donde se evalúa la condición física del paciente para minimizar riesgos durante y después del procedimiento. <em>Realizarlo a conciencia es vital</em>; ser honesto en la entrega de información médica garantiza una planificación anestésica adecuada, <strong>evitando complicaciones</strong>. La ventaja de hacerlo de manera online incluye la comodidad de completarlo desde casa, ahorra tiempo y reduce visitas presenciales, facilitando un proceso más eficiente y ágil. Esta modalidad permite una comunicación directa y efectiva con el equipo médico, asegurando que todos los datos necesarios estén disponibles para una atención personalizada y segura.</p>
     </section>
+    <div>
+        <img src="./assets/4921A01F-5A02-4E10-BF17-03DF0C5901C8.webp" alt="consulta_preop" class="consulta_img">
+    </div>
+</div>
     <!--Formulario divido en secciones segun los datos requeridos-->
-     <form action="./preop_data.txt" method="post" enctype="multipart/form-data" name="datos_personales">
+     <form action="./preop_data.txt" method="post" enctype="multipart/form-data" name="datos_personales" class="formulario">
         <h2>Formulario Preoperatorio</h2>
     <section class="datper">
             <fieldset>
@@ -160,7 +167,12 @@
 </form>
 </main>
     <section class="recomendaciones">
+        <div class="recomend_txt_img">
         <!--lista corta de recomendaciones para la preparacion de la cirugiay anestesia-->
+        <div>
+            <img src="./assets/268D3E44-01D8-4A16-B23B-4521C0D766DC.webp" alt="mix_medico" class="recomend_img">
+        </div>
+        <div>
     <h2>Lista de Recomendaciones Anestésicas</h2>
     <ul>
         <li><strong>Ayuno Obligatorio:</strong> Es importante no consumir alimentos sólidos ni líquidos, incluyendo agua, durante al menos 8 horas antes de la cirugía. Esto reduce el riesgo de aspiración pulmonar durante la anestesia.</li>
@@ -175,10 +187,13 @@
         <li><strong>Transporte Postoperatorio:</strong> Organice de antemano el transporte para regresar a casa después de la cirugía, ya que no estará en condiciones de conducir.</li>
         <li><strong>Instrucciones Específicas:</strong> Siga cualquier otra instrucción específica que su médico le haya dado, relacionada con su condición particular o el tipo de procedimiento a realizar.</li>
     </ul>
+        </div>
+    </div>
     <p><em>Recuerde que estas recomendaciones son generales y pueden variar dependiendo de su situación específica y del tipo de cirugía a la que se someterá. Es esencial seguir las instrucciones personalizadas proporcionadas por su equipo médico para asegurar el mejor resultado posible.
 
         Estas medidas son esenciales para su seguridad y bienestar, y el cumplimiento de las mismas contribuye significativamente al éxito de su procedimiento anestésico y quirúrgico.</em></p>
     </section>
+
     <section class="faq">
         <!--Seccion de preguntas y repsuestas mas frecuentes qu etienen lso pacientes previo a una cirugía-->
         <h2>Preguntas y Respuestas Frecuentes</h2>

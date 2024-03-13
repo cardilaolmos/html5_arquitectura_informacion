@@ -17,48 +17,98 @@ color: var(--color-second);
 }
 
 header{
-    position: fixed;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 10px;
-    height: 150px;
+    padding: 40px;
+    align-items: center;
+    position: fixed;
     width: 100%;
-    gap: 10px;
+    justify-content: space-between;
     background-color: var(--color-forth);
-}
 
+}
 header > img {
     width: 50px;
+    height: 50px
+}
+
+header > nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
 }
 
 .nav{
-    border: 2px solid red;
     display: flex;
-    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
     list-style: none;
-    gap:10px;
-    text-align: center;
     background-color: var(--color-forth);
 }
 
-.nav > ul {
-    background-color: var(--color-forth);
+header a{
+color: var(--color-primario);
+background-color: var(--color-forth);
+font-weight: 600;
+text-decoration: none;
 }
-.nav > li {
-    background-color: var(--color-forth);
-}
-.nav > li > a {
-    background-color: var(--color-forth);
-    color: var(--color-primario);
-    text-decoration: none;
 
+.menu_icon {
+    display: none;
+    width: 30px;
+    height: 30px;
+}
+
+@media (max-width: 750px) {
+    header > nav{
+        display: none;
+    }
+
+    .menu_icon{
+        display: block;
+        background-color: var(--color-forth);
+    }
+    main {
+        width: 90%;
+        justify-content: center;
+        margin: auto;
+    }
+    h1,h2 {
+        text-align: center;
+    }
+    
+    address {
+       display: none;
+    }
+
+    .contact > p{
+        text-align: center;
+    }
+}
+@media (max-width: 950px) {
+    .preop_exp{
+        flex-wrap: wrap;
+    } 
+}
+
+@media (min-width: 950px){
+    .formulario{
+        width: 80%;
+        justify-content: center;
+        margin: auto;
+    }
+
+    .recomendaciones{
+        width: 80%;
+        justify-content: center;
+        margin: auto;
+    }
 }
 
 main{
     display: flex;
     flex-wrap: wrap;
     }
+
 main > h1{
     display: flex;
     justify-content: center;
@@ -72,18 +122,33 @@ input, textarea, select{
     background-color: white;
 }
 
+.preop_exp{
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+    margin: auto;
+    gap: 40px;
+
+}
+
 .intro{
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    width: 100%;
+    flex-direction: column;
+    max-width: 1000px;
     padding: 20px;
     text-align: justify;
 }
+.consulta_img{
+    width: 350px;
+}
+
+
 
  h2 {
     display: flex;
     justify-content: center;
+    text-align: center;
     width: 100%;
     padding: 20px;
     color: var(--color-forth);
@@ -190,10 +255,11 @@ strong, em{
 }
 
 .confirmar {
-    display: flex;
     padding: 20px;
-    margin: 10px 0;
+    margin: auto;
     width: 100%;
+    text-align: justify;
+    line-height: 2;
 }
 
 .confirmar > section > label {
@@ -225,12 +291,21 @@ text-align: justify;
     border: 2px dotted black;
     border-radius: 10px;
     margin: 50px 10px;
+    gap: 40px;
+}
+.recomend_txt_img{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
 }
 
 .recomendaciones li {
 padding: 5px;
 margin: 0 10px;
+}
 
+.recomend_img{
+    width: 350px;
 }
 
 .faq{
@@ -254,6 +329,7 @@ aside{
     display: flex;
     width: 60%;    
     flex-direction: column;
+    justify-content: center;
     padding: 10px;
     margin: 20px auto;
 }
